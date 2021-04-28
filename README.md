@@ -1,24 +1,9 @@
-# constelation-pro
+# **Vue3.0星座运势H5 项目**
 
-## Project setup
-```
-npm install
-```
+ 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## **项目搭建**
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Vue create xxxxx 创建vue项目
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  ![img](file:///C:\Users\gyp\AppData\Local\Temp\ksohtml\wpsDECE.tmp.jpg)
