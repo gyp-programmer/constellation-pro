@@ -1,10 +1,10 @@
 export default {
     consName: '白羊座',
-    field: 'week',
+    field: 'today',
     errorCode: 0,
     today: {},
     tomorrow: {},
     week: {},
-    mouth: {},
+    month: {},
     year: {}
 }

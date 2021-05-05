@@ -18,8 +18,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "week" */ '../views/Week.vue')
   },
   {
-    path: '/mouth',
-    name: 'mouth',
+    path: '/month',
+    name: 'month',
     component: () => import(/* webpackChunkName: "mouth" */ '../views/Mouth.vue')
   },
   {

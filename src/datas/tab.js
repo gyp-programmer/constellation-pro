@@ -17,7 +17,7 @@ export default [
     {
         iconText: '月',
         tabText: '本月',
-        path: '/mouth'
+        path: '/month'
     },
     {
         iconText: '年',

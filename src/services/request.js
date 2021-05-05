@@ -5,7 +5,7 @@ function getData(consName, type) {
         axiosGet({
             url: `/api/constellation/getAll?consName=${consName}&type=${type}`,
             success(data) {
-                resolve(data)
+                resolve(data.data)
             },
             error(err) {
                 reject(err)
