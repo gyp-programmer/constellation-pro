@@ -8,17 +8,17 @@
 <script>
 import errorData from '@/datas/error'
 import { useStore } from 'vuex'
-import { computed } from 'vue' 
+import { computed } from 'vue'
 export default {
-    name: 'errorTip',
-    setup() {
-        const store = useStore()
+  name: 'errorTip',
+  setup () {
+    const store = useStore()
 
-        return {
-            errorData,
-            errorCode: computed(() => store.state.errorCode)
-        }
+    return {
+      errorData,
+      errorCode: computed(() => store.state.errorCode)
     }
+  }
 }
 </script>
 

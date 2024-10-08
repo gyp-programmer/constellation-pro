@@ -24,7 +24,7 @@ import MyHeader from '@/components/header'
 import Tab from '@/components/tab'
 import NavBar from '@/components/topbar'
 import { useStore } from 'vuex'
-import {computed, watch} from 'vue'
+import { computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import errorTip from '@/components/errorTip'
 
@@ -36,10 +36,10 @@ export default {
     NavBar,
     errorTip
   },
-  setup() {
-    const store = useStore(),
-          state = store.state,
-          router = useRouter()
+  setup () {
+    const store = useStore()
+    const state = store.state
+    const router = useRouter()
     router.push('/')
     store.commit('setField', 'today')
 

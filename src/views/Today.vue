@@ -4,10 +4,10 @@
             :name="todayData.name"
             :allIndex="todayData.all"
          />
-         <num-list 
+         <num-list
             :data="todayData"
          />
-         <cons-list 
+         <cons-list
             :data="todayData"
          />
     </div>
@@ -21,32 +21,32 @@ import NumList from '@/components/NumList'
 import ConsList from '@/components/list/today'
 
 export default {
-    name: 'TodayPage',
-    components: {
-        NumList,
-        ConsList
-    },
-    setup() {
-        const store = useStore(),
-              state = store.state,
-              status = ref('')
-              
-        onMounted(() => {
-            getData(store)
-            status.value = state.consName
-        })
+  name: 'TodayPage',
+  components: {
+    NumList,
+    ConsList
+  },
+  setup () {
+    const store = useStore()
+    const state = store.state
+    const status = ref('')
 
-        onActivated(() => {
-            if(status.value !== state.consName) {
-                getData(store)
-                status.value = state.consName
-            }
-        })
+    onMounted(() => {
+      getData(store)
+      status.value = state.consName
+    })
 
-        return {
-            todayData: computed(() => state.today)
-        }
+    onActivated(() => {
+      if (status.value !== state.consName) {
+        getData(store)
+        status.value = state.consName
+      }
+    })
+
+    return {
+      todayData: computed(() => state.today)
     }
+  }
 }
 </script>
 
