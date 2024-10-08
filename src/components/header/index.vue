@@ -1,4 +1,4 @@
-<template functional>
+<template>
     <header class="header">
         <img src="../../assets/img/header.jpeg" >
         <h1>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'MyHeader'
+  name: 'MyHeader'
 }
 </script>
 

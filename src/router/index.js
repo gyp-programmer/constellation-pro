@@ -1,3 +1,12 @@
+/*
+ * 路由入口文件
+ *
+ * @Author: grayson<grayson.gao@bvox.com>
+ * @Date: 2024-10-08 10:44:59
+ *
+ * Copyright © 2019-2024 bvox.com. All Rights Reserved.
+ */
+
 import { createRouter, createWebHistory } from 'vue-router'
 import Today from '../views/Today'
 
@@ -29,9 +38,9 @@ const routes = [
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
-
-export default router
+export default isMicroApp => {
+  return createRouter({
+    history: createWebHistory(isMicroApp ? '/micro-vue/' : process.env.BASE_URL),
+    routes
+  })
+}

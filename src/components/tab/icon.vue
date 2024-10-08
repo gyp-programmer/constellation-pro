@@ -1,4 +1,4 @@
-<template functional>
+<template>
     <div class="icon">
         <router-link
             :to="path"
@@ -11,17 +11,17 @@
 
 <script>
 export default {
-    name: 'TabIcon',
-    props: {
-        iconText: {
-            type: String,
-            default: ''
-        },
-        path: {
-            type: String,
-            default: ''
-        }
+  name: 'TabIcon',
+  props: {
+    iconText: {
+      type: String,
+      default: ''
+    },
+    path: {
+      type: String,
+      default: ''
     }
+  }
 }
 </script>
 <style lang="scss" scoped>
