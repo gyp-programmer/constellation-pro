@@ -21,7 +21,8 @@ function render (props = {}) {
   const { container } = props
   router = routerInstance(!!container)
 
-  instance = createApp(App).use(router).use(store).use(MyPlugin).mount(container ? container.querySelector('#app') : '#app')
+  instance = createApp(App).use(router).use(store).use(MyPlugin)
+  instance.mount(container ? container.querySelector('#app') : '#app')
 }
 
 // 独立运行时
