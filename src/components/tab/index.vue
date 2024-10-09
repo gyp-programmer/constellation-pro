@@ -1,6 +1,15 @@
+<!--
+ * @Todo: 请补充模块描述
+ *
+ * @Author: grayson<grayson.gao@bvox.com>
+ * @Date: 2024-10-08 10:44:59
+ *
+ * Copyright © 2019-2024 bvox.com. All Rights Reserved.
+-->
+
 <template>
     <div class="tab">
-        <div 
+        <div
             class="tab-item"
             v-for="(item, index) in tabData"
             :key="index"
@@ -24,20 +33,20 @@ import tabData from '@/datas/tab'
 import { useRoute } from 'vue-router'
 import { reactive, toRefs } from 'vue'
 export default {
-    name: 'Tab',
-    components: {
-        TabIcon
-    },
-    setup() {
-        const router = useRoute()
-        const state = reactive({
-            tabData,
-            router
-        })
-        return {
-            ...toRefs(state)
-        }
+  name: 'Tab',
+  components: {
+    TabIcon
+  },
+  setup () {
+    const router = useRoute()
+    const state = reactive({
+      tabData,
+      router
+    })
+    return {
+      ...toRefs(state)
     }
+  }
 }
 </script>
 

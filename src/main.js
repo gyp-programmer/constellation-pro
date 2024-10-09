@@ -6,7 +6,7 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-
+import './public-path'
 import { createApp } from 'vue'
 import App from './App.vue'
 import routerInstance from './router'
@@ -39,7 +39,6 @@ export async function mount (props) {
 }
 export async function unmount () {
   instance.unmount()
-  instance.$el.innerHTML = ''
   instance = null
   router = null
 }

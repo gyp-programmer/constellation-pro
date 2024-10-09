@@ -9,8 +9,10 @@
 
 import FastClick from './fastclick'
 
-// 设置html的大小  以便rem的使用
-document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + 'px'
+// 设置html的大小  以便rem的使用 微应用不处理
+if (!window.__POWERED_BY_QIANKUN__) {
+  document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + 'px'
+}
 
 window.addEventListener(
   'load',

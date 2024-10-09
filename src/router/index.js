@@ -7,7 +7,7 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createMemoryHistory } from 'vue-router'
 import Today from '../views/Today'
 
 const routes = [
@@ -40,7 +40,7 @@ const routes = [
 
 export default isMicroApp => {
   return createRouter({
-    history: createWebHistory(isMicroApp ? '/micro-vue/' : process.env.BASE_URL),
+    history: createMemoryHistory(isMicroApp ? '/micro-vue/' : process.env.BASE_URL),
     routes
   })
 }
